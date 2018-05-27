@@ -7,7 +7,7 @@
 
 int main()
 {
-
+maiorDaMatriz();
     return 0;
 }
 
@@ -18,12 +18,16 @@ void maiorDaMatriz()
     int linha;
     int coluna;
     int maior;
-
+    int linha_maior;
+    int coluna_maior;
+    int numero;
     for(linha = 0; linha < 4; linha++)
     {
         for(coluna =0; coluna < 4 ; coluna++)
         {
-            matriz[linha][coluna] = rand();
+            scanf("%d",&numero);
+
+            matriz[linha][coluna] = numero;
 
             if(linha == 0 && coluna ==0)
             {
@@ -33,11 +37,15 @@ void maiorDaMatriz()
             if(matriz[linha][coluna] >= maior)
             {
                 maior = matriz[linha][coluna];
+                linha_maior = linha;
+                coluna_maior = coluna;
             }
         }
+
+
     }
 
 
-
+printf("Linha = %d \n Coluna = %d",linha_maior,coluna_maior);
 
 }
